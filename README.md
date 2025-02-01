@@ -10,6 +10,7 @@ This project is a fully functional e-commerce website built using the MERN (Mong
 - **Product Management**: Upload, edit, and delete products via an admin dashboard.
 - **Cart & Order Management**: Add products to the cart, place orders, and track them in the admin panel.
 - **Payment Integration**: Supports Stripe and Razorpay for secure transactions.
+- **Image Uploads**: Uses Cloudinary and Multer for efficient image storage and handling.
 - **Deployment**: Fully deployed on Vercel for easy access.
 
 ## Project Structure
@@ -20,7 +21,8 @@ This project is a fully functional e-commerce website built using the MERN (Mong
 5. **Cart & Orders**: Managing user purchases and tracking orders.
 6. **Admin Dashboard**: Overview and control over website operations.
 7. **Payments**: Secure integration with Stripe and Razorpay.
-8. **Deployment**: Final hosting on Vercel.
+8. **Image Uploads**: Implemented using Cloudinary and Multer.
+9. **Deployment**: Final hosting on Vercel.
 
 ## Installation
 1. Clone the repository:
@@ -54,6 +56,7 @@ This project is a fully functional e-commerce website built using the MERN (Mong
 - **Backend**: Node.js, Express, MongoDB
 - **Authentication**: JWT
 - **Payment**: Stripe, Razorpay
+- **Image Uploads**: Cloudinary, Multer
 - **Deployment**: Vercel
 
 ## Deployment
@@ -67,6 +70,4 @@ To deploy the project on Vercel:
 
 ## License
 This project is licensed under the MIT License.
-
-
 
