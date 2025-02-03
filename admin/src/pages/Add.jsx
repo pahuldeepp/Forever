@@ -1,7 +1,20 @@
-import React from 'react'
-import { assets } from '../../../frontend/src/assets/assets';
+import React, { useState } from 'react'
+import { assets } from '../assets/assets';
 
 const Add = () => {
+  const [image1, setImage1] = useState(false);
+  const [image2, setImage2] = useState(false);
+  const [image3, setImage3] = useState(false);
+  const [image4, setImage4] = useState(false);
+
+  const [name, setName] = useState("");
+  const [description, setDescriptio] = useState("");
+  const [price, setprice] = useState("");
+  const [category, setCategory] = useState("Men")
+  const [subCategory, setSubCategoy] = useState("Topwear")
+  const [bestseller, setBestseller] = useState(false)
+  const [sizes, setSizes] = useState([])
+
   return (
     <form className='flex flex-col w-full items-start gap-3' action="">
       <div>
@@ -9,19 +22,19 @@ const Add = () => {
       <div className='flex gap-2'>
         <label htmlFor="image1">
           <img className='w-20' src={assets.upload_area} alt="" />
-          <input type="file" id='image1' hidden/>
+          <input type="file" id='image1'/>
         </label>
         <label htmlFor="image2">
           <img className='w-20' src={assets.upload_area} alt="" />
-          <input type="file" id='image2' hidden/>
+          <input type="file" id='image2'/>
         </label>
         <label htmlFor="image3">
           <img className='w-20' src={assets.upload_area} alt="" />
-          <input type="file" id='image3' hidden/>
+          <input type="file" id='image3'/>
         </label>
         <label htmlFor="image4">
           <img className='w-20' src={assets.upload_area} alt="" />
-          <input type="file" id='image4' hidden/>
+          <input type="file" id='image4'/>
         </label>
       </div>
     </div>
