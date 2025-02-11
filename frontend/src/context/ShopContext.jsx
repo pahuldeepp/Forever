@@ -142,7 +142,8 @@ const ShopContextProvider = (props) => {
         search, setSearch, showSearch, setShowSearch,
         cartItems, setCartItems, addToCart, 
         getCartCount, updateQuantity, getCartAmount,
-        navigate, backendUrl, token, setToken
+        navigate, backendUrl, token, setToken,
+        setCartItems
     } 
     return ( 
         <ShopContext.Provider value={value}> 
