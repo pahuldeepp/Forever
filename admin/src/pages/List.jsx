@@ -30,20 +30,31 @@ const List = () => {
 
   const removeProduct = async (id) => {
     try {
-      const response = await axios.post(backendUrl + '/api/product/remove', {id}, {headers:{token}})
+      const token = localStorage.getItem('token');  // ✅ Fetch token
+      if (!token) {
+        toast.error('Authentication token not found');
+        return;
+      }
+  
+      const response = await axios.post(
+        backendUrl + '/api/product/remove', 
+        { id }, 
+        { headers: { Authorization: `Bearer ${token}` } }  // ✅ Pass token properly
+      );
+  
       if (response.data.success) {
-        toast.success.message(response.data.message)
+        toast.success(response.data.message);
         await fetchList();
+      } else {
+        toast.error(response.data.message);
       }
-      else{
-        toast.error(response.data.message)
-      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error.response?.data?.message || error.message);
     }
-    catch (error){
-      console.error(error)
-      toast.error(error.message)
-    }
-  }
+  };
+  
+  
 
   return (
     <>
