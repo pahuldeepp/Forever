@@ -20,7 +20,7 @@ const loginUser = async (req, res) => {
         }
         else{
             const token = createToken(user._id);
-            res.json({ success: true, token });
+            res.json({ success: true, token: token });
         }
         
     }
