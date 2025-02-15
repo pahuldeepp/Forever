@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from 'axios';
 import { toast } from "react-toastify";
 import { useNavigate } from 'react-router-dom';
-import { heading } from "discord.js";
+
 
 
 export const ShopContext = createContext(); 
@@ -143,7 +143,7 @@ const ShopContextProvider = (props) => {
         cartItems, setCartItems, addToCart, 
         getCartCount, updateQuantity, getCartAmount,
         navigate, backendUrl, token, setToken,
-        setCartItems
+        setProducts
     } 
     return ( 
         <ShopContext.Provider value={value}> 
