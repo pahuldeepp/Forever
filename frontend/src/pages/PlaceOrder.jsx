@@ -46,7 +46,8 @@ const PlaceOrder = () => {
           }
         });
       });
-
+      console.log(formData);
+      
       let orderData = {
         address: formData,
         items: orderItems,
