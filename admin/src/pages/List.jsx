@@ -37,10 +37,12 @@ const List = () => {
       }
   
       const response = await axios.post(
-        backendUrl + '/api/product/remove', 
-        { id }, 
-        { headers: { Authorization: `Bearer ${token}` } }  // ✅ Pass token properly
+        backendUrl + 'api/product/remove',
+        { id },
+        { headers: { token } }  // ✅ Pass token properly
       );
+
+
   
       if (response.data.success) {
         toast.success(response.data.message);
