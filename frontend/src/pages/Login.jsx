@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [currentState, setCurrentState]= useState('Sign Up');
@@ -14,7 +15,7 @@ const Login = () => {
     event.preventDefault();
     try{
       if(currentState === 'Sign Up'){
-        const response = await axios.post(backendUrl + 'api/user/register', {name, email, password})
+        const response = await axios.post(backendUrl + '/api/user/register', {name, email, password})
         if(response.data.success){
           setToken(response.data.token)
           localStorage.setItem('token', response.data.token)

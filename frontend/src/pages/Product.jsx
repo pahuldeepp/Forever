@@ -15,7 +15,7 @@ const Product = () => {
     const product = products.find((item) => item._id === productId);
     if (product) {
       setProductData(product);
-      setImage(product.image[0]); // Assuming `image` is an array of URLs
+      setImage(product.images[0]); // Assuming `image` is an array of URLs
     }
   };
 
@@ -31,7 +31,7 @@ const Product = () => {
         <div className="flex-1 flex flex-col sm:flex-row gap-3">
           {/* Thumbnails */}
           <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-auto sm:w-[20%] w-full gap-2">
-            {productData.image.map((item, index) => (
+            {productData.images.map((item, index) => (
               <img
                 onClick={() => setImage(item)}
                 src={item}
