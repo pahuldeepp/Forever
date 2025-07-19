@@ -3,7 +3,6 @@
 ## 🔗 Live Demo Links
 - **Frontend (User Site)**: [https://forever-frontend-three-chi.vercel.app/](https://forever-frontend-three-chi.vercel.app/)
 - **Admin Panel**: [https://forever-admin-coral-nu.vercel.app/](https://forever-admin-coral-nu.vercel.app/)
-- **Combined Site**: [https://forever-drab.vercel.app/](https://forever-drab.vercel.app/)
 
 ---
 
